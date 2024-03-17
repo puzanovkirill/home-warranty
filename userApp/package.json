@@ -1,28 +1,24 @@
 {
-  "name": "app",
+  "name": "userApp",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 5000 --strictPort",
-    "build": "vite build",
-    "preview": "vite preview --port 5000 --strictPort",
-    "serve": "vite preview --port 5000 --strictPort"
+    "dev": "vite --port 5002 --strictPort",
+    "build": "vite build --watch",
+    "preview": "vite preview --port 5002 --strictPort",
+    "serve": "vite preview --port 5002 --strictPort"
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "userApp": "link:"
   },
   "devDependencies": {
-    "@types/react": "18.2.65",
-    "@types/react-dom": "18.2.22",
+    "@types/react": "18.0.17",
+    "@types/react-dom": "18.0.6",
     "@vitejs/plugin-react": "3.0.0",
-    "@types/node": "20.11.28",
     "eslint": "8.55.0",
-    "prettier": "3.1.0",
-    "typescript": "5.4.2",
-    "vite": "4.5.2",
-    "vite-plugin-checker": "0.6.2",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "9.1.0",
     "eslint-import-resolver-typescript": "3.6.1",
@@ -30,6 +26,10 @@
     "eslint-plugin-jsx-a11y": "6.8.0",
     "eslint-plugin-prettier": "5.0.1",
     "eslint-plugin-react": "7.33.2",
-    "eslint-plugin-react-hooks": "4.6.0"
+    "eslint-plugin-react-hooks": "4.6.0",
+    "prettier": "3.1.0",
+    "typescript": "5.4.2",
+    "vite": "4.5.2",
+    "vite-plugin-checker": "0.6.2"
   }
 }

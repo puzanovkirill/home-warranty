@@ -5,10 +5,15 @@
   "scripts": {
     "build": "pnpm --parallel --filter \"./**\" build",
     "serve": "pnpm --parallel --filter \"./**\" preview",
-    "build:remotes": "pnpm --parallel --filter \"./remote\" build",
-    "serve:remotes": "pnpm --parallel --filter \"./remote\" serve",
+    "build:remotes": "pnpm --parallel --filter \"./workerApp\" build & pnpm --parallel --filter \"./userApp\" build",
+    "build:worker": "pnpm --parallel --filter \"./workerApp\" build",
+    "build:user": "pnpm --parallel --filter \"./userApp\" build",
+    "serve:remotes": "pnpm --parallel --filter \"./workerApp\" serve & pnpm --parallel --filter \"./userApp\" serve",
+    "serve:worker": "pnpm --parallel --filter \"./workerApp\" serve",
+    "serve:user": "pnpm --parallel --filter \"./userApp\" serve",
     "dev:hosts": "pnpm --filter \"./host\" dev",
-    "stop": "kill-port --port 5000,5001"
+    "stop": "kill-port --port 5000,5001,5002",
+    "stop:remotes": "kill-port --port 5001,5002"
   },
   "devDependencies": {
     "@originjs/vite-plugin-federation": "1.3.5",
